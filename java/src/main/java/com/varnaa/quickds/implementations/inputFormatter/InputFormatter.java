@@ -23,12 +23,14 @@ public class InputFormatter {
 
     public char[][] format2dCharArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
+        input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll("'", "");
         input = input.replaceAll(",", "");
-        System.out.println(input);
+        int index = 0;
         char[][] grid = new char[rowLength][colLength];
         for (int i = 0; i < rowLength; i++) {
             for (int j = 0; j < colLength; j++) {
-                grid[i][j] = input.charAt(i + j);
+                grid[i][j] = input.charAt(index++);
             }
         }
         return grid;
@@ -36,12 +38,13 @@ public class InputFormatter {
 
     public int[][] format2dIntArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
-        input = input.replaceAll(",", "");
+        input = input.replace("[", "").replace("]", "");
+        String[] inputArray = input.split(",");
         int index = 0;
         int[][] matrix = new int[rowLength][colLength];
         for (int i = 0; i < rowLength; i++) {
             for (int j = 0; j < colLength; j++) {
-                matrix[i][j] = input.charAt(index++) - '0';
+                matrix[i][j] = Integer.valueOf(inputArray[index++]);
             }
         }
         return matrix;

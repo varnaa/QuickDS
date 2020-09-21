@@ -58,9 +58,9 @@ public class Array implements PrettyPrint<int[]> {
 
     @Override
     public void prettyPrint(int[] array) {
-        StringBuilder output = new StringBuilder("{ ");
+        StringBuilder output = new StringBuilder("{");
         for (int i : array)
-            output.append(i).append(" ");
+            output.append(i).append(",");
         output.append("}");
         System.out.println(output.toString());
     }
@@ -68,9 +68,9 @@ public class Array implements PrettyPrint<int[]> {
     public void prettyPrint(int[][] array) {
         StringBuilder output = new StringBuilder("[");
         for (int i = 0; i < array.length; i++) {
-            output.append("[ ");
+            output.append("[");
             for (int j = 0; j < array[0].length; j++) {
-                output.append(array[i][j]).append(" ");
+                output.append(array[i][j]).append(",");
             }
             output.append("]");
         }
