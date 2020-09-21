@@ -3,57 +3,85 @@
 """
 
 
+# Class to build Linked List nodes
 class Node:
+    # Constructor
     def __init__(self, val):
-        self.val = val
-        self.next = None
+        self.__val = val
+        self.__next = None
+
+    # Getters ans Setters for Node class members
+    def get_next(self):
+        return self.__next
+
+    def get_val(self):
+        return self.__val
+
+    def set_next(self, val):
+        self.__next = Node(val)
 
 
-class linkedList:
+class LinkedList:
+    # Constructor
     def __init__(self):
-        self.head = None
+        self.__head = None
 
-    def __insertNode(self, val: object) -> object:
+    # Getter for head node
+    def get_head(self):
+        return self.__head
+
+    # Creates and inserts node into the linked list
+    def insert_node(self, val):
         """
         :param val: value of the Node to be created
-        :return: Bool value
         """
 
         # if head Node is none then create the head Node with the value
-        if self.head is None:
-            self.head = Node(val)
-            # Return success
-            return True
+        if self.__head is None:
+            self.__head = Node(val)
 
-        try:
+        else:
             # create a copy of head Node
-            temp = self.head
+            temp = self.__head
 
             # traverse the available linked list
-            while temp.next is not None:
-                temp = temp.next
+            while temp.get_next() is not None:
+                temp = temp.get_next()
 
             # Add Node at the end of linked list
-            temp.next = Node(val)
+            temp.set_next(val)
 
-            # Return success
-            return True
 
-        except:
-            # return Failure
-            return False
+# Prints the linked list
+def print_linked_list(headnode):
+    """
+    :param headnode: Head Node of linked list class instance
+    """
 
-    # Creates a linked list with the values in array
-    def createLinkedList(self, array: object) -> object:
-        """
-        :param array: iterable that specifies the values of linked list to be created
-        :return: On success returns head node of linked list
-        """
-        # Traverse the array
-        for i in array:
-            if not self.__insertNode(i):
-                # Return failure
-                return False
+    __str = ""
+    head = headnode
 
-        # Return success
-        return self.head
+    while head is not None:
+        __str += str(head.get_val())
+        head = head.get_next()
+    print(__str)
+
+
+# Creates a linked list with the values in array
+def create_linked_list(array):
+    """
+    :param array: iterable that specifies the values of linked list to be created
+    :return: On success returns head node of linked list
+    """
+
+    # Create an linked list object
+    obj = LinkedList()
+
+    # Traverse the array
+    for i in array:
+        obj.insert_node(i)
+
+    # Return success
+    head = obj.get_head()
+    print_linked_list(head)
+    return head
