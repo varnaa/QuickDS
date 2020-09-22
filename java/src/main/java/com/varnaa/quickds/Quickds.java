@@ -1,10 +1,5 @@
 package com.varnaa.quickds;
 
-import com.varnaa.quickds.implementations.array.Array;
-import com.varnaa.quickds.implementations.inputFormatter.InputFormatter;
-import com.varnaa.quickds.implementations.linkedlist.LinkedList;
-import com.varnaa.quickds.implementations.linkedlist.Node;
-
 /**
  * @Author: swethavarnaa
  */

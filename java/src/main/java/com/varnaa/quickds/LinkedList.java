@@ -1,14 +1,13 @@
-package com.varnaa.quickds.implementations.linkedlist;
-
-import com.varnaa.quickds.implementations.prettyPrint.PrettyPrint;
+package com.varnaa.quickds;
 
 import java.util.Random;
 
 /**
  * @Author: swethavarnaa
  */
-public class LinkedList implements PrettyPrint<Node> {
+class LinkedList {
     private final int LENGTH = 10;
+    private final int BOUND = 20;
     private final Random RANDOM = new Random();
     private Node head;
 
@@ -20,7 +19,7 @@ public class LinkedList implements PrettyPrint<Node> {
         return this.head == null;
     }
 
-    public void insertNode(int value) {
+    void insertNode(int value) {
         if (isEmpty()) {
             head = new Node(value);
         } else {
@@ -39,20 +38,35 @@ public class LinkedList implements PrettyPrint<Node> {
     public Node createRandomLinkedList() {
         LinkedList linkedList = new LinkedList();
         for (int i = 0; i < LENGTH; i++) {
-            linkedList.insertNode(RANDOM.nextInt(10));
+            linkedList.insertNode(RANDOM.nextInt(BOUND));
         }
 
         return linkedList.getHead();
     }
 
 
-    @Override
     public void prettyPrint(Node head) {
         StringBuilder output = new StringBuilder();
         while (head != null) {
             output.append(head.value).append(" -> ");
+            head = head.next;
         }
         output.append("null");
         System.out.println(output.toString());
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        LinkedList that = (LinkedList) o;
+
+        return head.equals(that.head);
+    }
+
+    @Override
+    public int hashCode() {
+        return head.hashCode();
     }
 }

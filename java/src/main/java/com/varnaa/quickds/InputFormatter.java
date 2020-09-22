@@ -1,12 +1,9 @@
-package com.varnaa.quickds.implementations.inputFormatter;
-
-import com.varnaa.quickds.implementations.linkedlist.LinkedList;
-import com.varnaa.quickds.implementations.linkedlist.Node;
+package com.varnaa.quickds;
 
 /**
  * @Author: swethavarnaa
  */
-public class InputFormatter {
+class InputFormatter {
     private LinkedList linkedList;
 
     public int[] format1dArray(String input) {
@@ -16,7 +13,7 @@ public class InputFormatter {
         int[] array = new int[inputArray.length];
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = Integer.valueOf(inputArray[i]);
+            array[i] = Integer.parseInt(inputArray[i]);
         }
         return array;
     }
@@ -44,14 +41,14 @@ public class InputFormatter {
         int[][] matrix = new int[rowLength][colLength];
         for (int i = 0; i < rowLength; i++) {
             for (int j = 0; j < colLength; j++) {
-                matrix[i][j] = Integer.valueOf(inputArray[index++]);
+                matrix[i][j] = Integer.parseInt(inputArray[index++]);
             }
         }
         return matrix;
     }
 
 
-    public Node formatLinkedList(String input) {
+    public Node formatToLinkedList(String input) {
 
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
@@ -59,9 +56,19 @@ public class InputFormatter {
 
         linkedList = new LinkedList();
         for (String number : inputArray) {
-            linkedList.insertNode(Integer.valueOf(number));
+            linkedList.insertNode(Integer.parseInt(number));
         }
 
         return linkedList.getHead();
     }
+
+    public Node formatToLinkedList(int[] array) {
+        assert array != null : "input array cant be null, should contain at least one value";
+        linkedList = new LinkedList();
+        for (int j : array) {
+            linkedList.insertNode(j);
+        }
+        return linkedList.getHead();
+    }
+
 }

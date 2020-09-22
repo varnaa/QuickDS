@@ -1,13 +1,11 @@
-package com.varnaa.quickds.implementations.array;
-
-import com.varnaa.quickds.implementations.prettyPrint.PrettyPrint;
+package com.varnaa.quickds;
 
 import java.util.Random;
 
 /**
  * @Author: swethavarnaa
  */
-public class Array implements PrettyPrint<int[]> {
+class Array {
 
     private final int BOUND = 10;
     private final int ROW_LENGTH = 4;
@@ -56,7 +54,6 @@ public class Array implements PrettyPrint<int[]> {
         return array;
     }
 
-    @Override
     public void prettyPrint(int[] array) {
         StringBuilder output = new StringBuilder("{");
         for (int i : array)
