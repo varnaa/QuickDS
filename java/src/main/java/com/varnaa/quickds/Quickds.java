@@ -73,6 +73,11 @@ public class Quickds {
         return this.binarySearchTree.createRandomBinarySearchTree();
     }
 
+    public TreeNode createRandomBST(int height) {
+        this.binarySearchTree.setHeight(height);
+        return binarySearchTree.createRandomBinarySearchTree();
+    }
+
     public TreeNode createBSTFromSortedArray(int[] array) {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("sorted Array can not be empty or null");
@@ -91,4 +96,5 @@ public class Quickds {
     public void printBST(TreeNode root) {
         this.binarySearchTree.printBSt(root);
     }
+
 }
