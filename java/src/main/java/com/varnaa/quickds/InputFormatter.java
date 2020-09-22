@@ -5,7 +5,7 @@ package com.varnaa.quickds;
  */
 class InputFormatter {
     private LinkedList linkedList;
-
+    private BinarySearchTree binarySearchTree;
     public int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
@@ -71,4 +71,14 @@ class InputFormatter {
         return linkedList.getHead();
     }
 
+    public TreeNode formatBST(String input) {
+        input = input.replace("[", "").replace("]", "");
+        String[] inputArray = input.split(",");
+
+        if (inputArray[0] == null) {
+            return null;
+        }
+        BinarySearchTree binarySearchTree = new BinarySearchTree();
+        return binarySearchTree.deserialize(inputArray, binarySearchTree);
+    }
 }
