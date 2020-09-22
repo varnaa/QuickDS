@@ -1,17 +1,16 @@
 package com.varnaa.test;
 
-import com.varnaa.quickds.implementations.array.Array;
-import com.varnaa.quickds.implementations.inputFormatter.InputFormatter;
-import org.junit.Test;
+import com.varnaa.quickds.Array;
+import com.varnaa.quickds.InputFormatter;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 /**
  * @Author: swethavarnaa
  */
-public class ArrayTest {
+class ArrayTest {
     private final Array array = new Array();
     private final InputFormatter inputFormatter = new InputFormatter();
 
@@ -19,8 +18,8 @@ public class ArrayTest {
     public void createArrayTest() {
         int[] generatedArray = array.createRandomArray();
         int[][] generated2dArray = array.createRandom2DArray();
-        assertTrue(generatedArray != null);
-        assertTrue(generated2dArray != null);
+        assertNotNull(generatedArray);
+        assertNotNull(generated2dArray);
         array.prettyPrint(generatedArray);
         array.prettyPrint(generated2dArray);
     }
@@ -30,9 +29,9 @@ public class ArrayTest {
         int[] generatedArray = array.createRandomArray(20);
         int[][] generated2dArray = array.createRandom2DArray(5, 5);
 
-        assertTrue(generatedArray.length == 20);
-        assertTrue(generated2dArray.length == 5);
-        assertTrue(generated2dArray[0].length == 5);
+        Assertions.assertEquals(generatedArray.length, 20);
+        Assertions.assertEquals(generated2dArray.length, 5);
+        Assertions.assertEquals(generated2dArray[0].length, 5);
 
 
     }
@@ -53,7 +52,7 @@ public class ArrayTest {
     public void format1dArrayTest() {
 
         String input = "[17,2,3,4,5]";
-        assertArrayEquals(new int[]{17, 2, 3, 4, 5,}, inputFormatter.format1dArray(input));
+        Assertions.assertArrayEquals(new int[]{17, 2, 3, 4, 5,}, inputFormatter.format1dArray(input));
     }
 
     @Test
