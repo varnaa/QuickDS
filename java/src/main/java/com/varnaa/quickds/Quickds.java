@@ -7,11 +7,13 @@ public class Quickds {
     private final Array array;
     private final LinkedList linkedList;
     private final InputFormatter inputFormatter;
+    private final BinarySearchTree binarySearchTree;
 
     public Quickds() {
         this.array = new Array();
         this.linkedList = new LinkedList();
         this.inputFormatter = new InputFormatter();
+        this.binarySearchTree = new BinarySearchTree();
     }
 
 
@@ -64,8 +66,29 @@ public class Quickds {
     }
 
     public Node formatStringToLinkedList(String input) {
-        return inputFormatter.formatToLinkedList(input);
+        return this.inputFormatter.formatToLinkedList(input);
     }
 
+    public TreeNode createRandomBST() {
+        return this.binarySearchTree.createRandomBinarySearchTree();
+    }
 
+    public TreeNode createBSTFromSortedArray(int[] array) {
+        if (array == null || array.length == 0) {
+            throw new IllegalArgumentException("sorted Array can not be empty or null");
+        }
+        return this.binarySearchTree.convertSortedArrayToBST(array, 0, array.length);
+    }
+
+    public TreeNode formatStringToBST(String input) {
+        return this.inputFormatter.formatBST(input);
+    }
+
+    public void prettyPrintBST(TreeNode root) {
+        this.binarySearchTree.prettyPrint("", root, false);
+    }
+
+    public void printBST(TreeNode root) {
+        this.binarySearchTree.printBSt(root);
+    }
 }
