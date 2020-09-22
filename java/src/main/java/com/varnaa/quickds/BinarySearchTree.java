@@ -39,7 +39,7 @@ class BinarySearchTree {
         return null;
     }
 
-    public TreeNode createRandomBinarySearchTree() {
+    protected TreeNode createRandomBinarySearchTree() {
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         int[] randomNumbers = random.ints(1, 100).distinct().limit(height).toArray();
         Arrays.sort(randomNumbers);
@@ -48,7 +48,7 @@ class BinarySearchTree {
 
     }
 
-    public TreeNode convertSortedArrayToBST(int[] randomNumbers, int lowerBound, int upperBound) {
+    protected TreeNode convertSortedArrayToBST(int[] randomNumbers, int lowerBound, int upperBound) {
         if (lowerBound > upperBound) return null;
 
         int middle = lowerBound + (upperBound - lowerBound) / 2;
@@ -58,7 +58,7 @@ class BinarySearchTree {
         return root;
     }
 
-    public String[] serialize(TreeNode root) {
+    private String[] serialize(TreeNode root) {
         if (root == null)
             System.out.println("[]");
         List<String> bstList = new LinkedList<>();
@@ -90,7 +90,7 @@ class BinarySearchTree {
         return bstArray;
     }
 
-    public TreeNode deserialize(String[] input, BinarySearchTree binarySearchTree) {
+    protected TreeNode deserialize(String[] input, BinarySearchTree binarySearchTree) {
         System.out.println("Input From deserialize: " + Arrays.toString(input));
         Deque<TreeNode> queue = new LinkedList<>();
         TreeNode root = binarySearchTree.getRoot();
@@ -110,7 +110,7 @@ class BinarySearchTree {
         return root;
     }
 
-    public void prettyPrint(String prefix, TreeNode root, boolean isLeft) {
+    protected void prettyPrint(String prefix, TreeNode root, boolean isLeft) {
         if (root != null) {
             System.out.println(prefix + (isLeft ? "|-- " : "\\-- ") + root.value);
             prettyPrint(prefix + (isLeft ? "|   " : "    "), root.left, true);
@@ -118,7 +118,7 @@ class BinarySearchTree {
         }
     }
 
-    public void printBSt(TreeNode root) {
+    protected void printBSt(TreeNode root) {
         String[] array = serialize(root);
         int index = array.length - 1;
         while (array[index] == null) {
@@ -133,7 +133,7 @@ class BinarySearchTree {
         System.out.println(output.toString());
     }
 
-    public void setHeight(int height) {
+    protected void setHeight(int height) {
         this.height = height;
     }
 }

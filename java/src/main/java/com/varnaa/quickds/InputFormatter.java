@@ -6,7 +6,7 @@ package com.varnaa.quickds;
 class InputFormatter {
     private LinkedList linkedList;
     private BinarySearchTree binarySearchTree;
-    public int[] format1dArray(String input) {
+    protected int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
         String[] inputArray = input.split(",");
@@ -18,7 +18,7 @@ class InputFormatter {
         return array;
     }
 
-    public char[][] format2dCharArray(String input, int rowLength, int colLength) {
+    protected char[][] format2dCharArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
         input = input.replaceAll("'", "");
@@ -33,7 +33,7 @@ class InputFormatter {
         return grid;
     }
 
-    public int[][] format2dIntArray(String input, int rowLength, int colLength) {
+    protected int[][] format2dIntArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
         String[] inputArray = input.split(",");
@@ -48,7 +48,7 @@ class InputFormatter {
     }
 
 
-    public Node formatToLinkedList(String input) {
+    protected Node formatToLinkedList(String input) {
 
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
@@ -62,7 +62,7 @@ class InputFormatter {
         return linkedList.getHead();
     }
 
-    public Node formatToLinkedList(int[] array) {
+    protected Node formatToLinkedList(int[] array) {
         assert array != null : "input array cant be null, should contain at least one value";
         linkedList = new LinkedList();
         for (int j : array) {
@@ -71,7 +71,7 @@ class InputFormatter {
         return linkedList.getHead();
     }
 
-    public TreeNode formatBST(String input) {
+    protected TreeNode formatBST(String input) {
         input = input.replace("[", "").replace("]", "");
         String[] inputArray = input.split(",");
 
@@ -81,4 +81,6 @@ class InputFormatter {
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         return binarySearchTree.deserialize(inputArray, binarySearchTree);
     }
+
+
 }

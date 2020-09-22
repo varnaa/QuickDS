@@ -17,7 +17,7 @@ public class Quickds {
     }
 
 
-    public void print1DArray(int[] input) {
+    public void print1dArray(int[] input) {
         this.array.prettyPrint(input);
     }
 
@@ -61,6 +61,11 @@ public class Quickds {
         return this.linkedList.createRandomLinkedList();
     }
 
+    public Node createCustomLinkedList(int length) {
+        this.linkedList.setLENGTH(length);
+        return this.linkedList.createRandomLinkedList();
+    }
+
     public Node formatArrayToLinkedList(int[] array) {
         return this.inputFormatter.formatToLinkedList(array);
     }
@@ -73,7 +78,7 @@ public class Quickds {
         return this.binarySearchTree.createRandomBinarySearchTree();
     }
 
-    public TreeNode createRandomBST(int height) {
+    public TreeNode createCustomBST(int height) {
         this.binarySearchTree.setHeight(height);
         return binarySearchTree.createRandomBinarySearchTree();
     }
