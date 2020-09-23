@@ -91,7 +91,6 @@ class BinarySearchTree {
     }
 
     protected TreeNode deserialize(String[] input, BinarySearchTree binarySearchTree) {
-        System.out.println("Input From deserialize: " + Arrays.toString(input));
         Deque<TreeNode> queue = new LinkedList<>();
         TreeNode root = binarySearchTree.getRoot();
         root = binarySearchTree.insertNode(root, input[0]);
@@ -103,8 +102,10 @@ class BinarySearchTree {
                 parent.left = binarySearchTree.insertNode(parent, input[i]);
                 queue.offer(parent.left);
                 ++i;
-                parent.right = binarySearchTree.insertNode(parent, input[i]);
-                queue.offer(parent.right);
+                if (i < input.length) {
+                    parent.right = binarySearchTree.insertNode(parent, input[i]);
+                    queue.offer(parent.right);
+                }
             }
         }
         return root;
