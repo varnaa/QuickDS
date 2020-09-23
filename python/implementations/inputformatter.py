@@ -89,3 +89,15 @@ class InputFormatter:
         """
         inp = InputFormatter.format_1d_int_list(inp)
         return main.create_linked_list(inp)
+
+    # Formats BST
+    @staticmethod
+    def format_bst(inp):
+        """
+        :param inp: input string
+        :return: root node of the tree
+        """
+        inp = inp.replace("[", "").replace("]", "")
+        if len(inp) == 0:
+            return None
+        return main.deserialize(inp)
