@@ -78,8 +78,8 @@ public class Quickds {
         return this.binarySearchTree.createRandomBinarySearchTree();
     }
 
-    public TreeNode createCustomBST(int height) {
-        this.binarySearchTree.setHeight(height);
+    public TreeNode createCustomBST(int numberOfNodes) {
+        this.binarySearchTree.setHeight(numberOfNodes);
         return binarySearchTree.createRandomBinarySearchTree();
     }
 
