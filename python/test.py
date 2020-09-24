@@ -2,37 +2,38 @@
 @Author: rishi
 """
 
-import python.main as main_
+# import python as main_
+from python import *
 
 # Test Linked list class
 print("------LinkedList------")
 array = [1, 2, 3, 4, 5]
-main_.pretty_print(main_.create_linked_list(array))
-main_.pretty_print(main_.create_random_linked_list(20))
+pretty_print(create_linked_list(array))
+pretty_print(create_random_linked_list(20))
 
 # Test List class
 print("------List------")
-print(main_.create_random_list(20))
-print(main_.create_random_2d_list(5))
+print(create_random_list(20))
+print(create_random_2d_list(5))
 
 # Test inputformatter class
 print("------InputFormatter------")
-print(main_.format_1d_int_list("{1, 2, 3}"))
-print(main_.format_1d_char_list("{'1', '2', '3'}"))
-print(main_.format_2d_int_list("{{1, 2, 3}, {4, 5, 6}}", 2, 3))
-print(main_.format_2d_char_list("{{'1', '2', '3'}, {'4', '5', '6'}}", 2, 3))
-main_.pretty_print(main_.format_linked_list("{1, 2, 3}"))
-main_.pretty_print_bst(main_.format_bst("[3,1,4,#,2,#,5,#,#,#,#]"))
+print(format_1d_int_list("{1, 2, 3}"))
+print(format_1d_char_list("{'1', '2', '3'}"))
+print(format_2d_int_list("{{1, 2, 3}, {4, 5, 6}}", 2, 3))
+print(format_2d_char_list("{{'1', '2', '3'}, {'4', '5', '6'}}", 2, 3))
+pretty_print(format_linked_list("{1, 2, 3}"))
+pretty_print_bst(format_bst("[3,1,4,null,2,null,5,null,null,null,null]"))
 
 # Test BinarySearchTree class
 print("------BST------")
-r = main_.convert_level_order_traversal_to_bst([3, 1, 4, 2, 5])
-main_.pretty_print_bst(r)
-r1 = main_.convert_sorted_list_to_bst([1, 2, 3, 4, 5])
-st = main_.serialize(r1)
+r = convert_level_order_traversal_to_bst([3, 1, 4, 2, 5])
+pretty_print_bst(r)
+r1 = convert_sorted_list_to_bst([1, 2, 3, 4, 5])
+st = serialize(r1)
 print(st)
-r2 = main_.deserialize(st)
-r3 = main_.create_random_binary_search_tree()
-main_.pretty_print_bst(r1)
-main_.pretty_print_bst(r3)
-main_.print_bst(r2)
+r2 = deserialize(st)
+r3 = create_random_binary_search_tree()
+pretty_print_bst(r1)
+pretty_print_bst(r3)
+print_bst(r2)

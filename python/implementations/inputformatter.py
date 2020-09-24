@@ -3,7 +3,7 @@
 """
 
 # Import required modules
-from python import main
+import python as py
 
 
 # Class to build InputFormatter
@@ -88,7 +88,7 @@ class InputFormatter:
         :return: head node of linked list
         """
         inp = InputFormatter.format_1d_int_list(inp)
-        return main.create_linked_list(inp)
+        return py.create_linked_list(inp)
 
     # Formats BST
     @staticmethod
@@ -100,4 +100,4 @@ class InputFormatter:
         inp = inp.replace("[", "").replace("]", "")
         if len(inp) == 0:
             return None
-        return main.deserialize(inp)
+        return py.deserialize(inp)

@@ -96,7 +96,7 @@ class BinarySearchTree:
                 q.append(node.get_left())
                 q.append(node.get_right())
             if not node:
-                res.append('#')
+                res.append('null')
         # Convert array to string and return
         return ','.join(res)
 
@@ -123,11 +123,11 @@ class BinarySearchTree:
             node = q.popleft()
 
             # Add values to BST
-            if tem[index] != '#':
+            if tem[index] != 'null':
                 node.set_left(TreeNode(tem[index]))
                 q.append(node.get_left())
             index += 1
-            if tem[index] != '#':
+            if tem[index] != 'null':
                 node.set_right(TreeNode(tem[index]))
                 q.append(node.get_right())
             index += 1
