@@ -77,6 +77,13 @@ public class QuickDSTest {
     }
 
     @Test
+    public void createCustomLinkedList() {
+        Node node = quickds.formatStringToLinkedList("[4,1,8,4,5]");
+        assertNotNull(node);
+
+    }
+
+    @Test
     public void createBST() {
         // Random
         TreeNode root = quickds.createRandomBST();
