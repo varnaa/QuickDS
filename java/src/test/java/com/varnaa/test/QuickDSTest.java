@@ -1,8 +1,8 @@
 package com.varnaa.test;
 
-import com.varnaa.quickds.Node;
-import com.varnaa.quickds.Quickds;
-import com.varnaa.quickds.TreeNode;
+import com.varnaa.Node;
+import com.varnaa.Quickds;
+import com.varnaa.TreeNode;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
