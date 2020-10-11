@@ -7,7 +7,6 @@ import java.util.Arrays;
  */
 class InputFormatter {
     private LinkedList linkedList;
-    private BinarySearchTree binarySearchTree;
 
     protected int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
@@ -41,6 +40,7 @@ class InputFormatter {
     protected int[][] format2dIntArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
         String[] inputArray = input.split(",");
         int index = 0;
         int[][] matrix = new int[rowLength][colLength];
