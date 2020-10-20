@@ -1,4 +1,4 @@
-package com.varnaa.quickds;
+package com.varnaa;
 
 import java.util.LinkedList;
 import java.util.*;

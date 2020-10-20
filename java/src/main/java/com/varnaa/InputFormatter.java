@@ -1,14 +1,17 @@
-package com.varnaa.quickds;
+package com.varnaa;
+
+import java.util.Arrays;
 
 /**
  * @Author: swethavarnaa
  */
 class InputFormatter {
     private LinkedList linkedList;
-    private BinarySearchTree binarySearchTree;
+
     protected int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
         String[] inputArray = input.split(",");
         int[] array = new int[inputArray.length];
 
@@ -22,6 +25,7 @@ class InputFormatter {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
         input = input.replaceAll("'", "");
+        input = input.replaceAll(" ", "");
         input = input.replaceAll(",", "");
         int index = 0;
         char[][] grid = new char[rowLength][colLength];
@@ -36,6 +40,7 @@ class InputFormatter {
     protected int[][] format2dIntArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
         String[] inputArray = input.split(",");
         int index = 0;
         int[][] matrix = new int[rowLength][colLength];
@@ -52,8 +57,9 @@ class InputFormatter {
 
         assert input != null : "input to format can not be null";
         input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
         String[] inputArray = input.split(",");
-
+        System.out.println(Arrays.toString(inputArray));
         linkedList = new LinkedList();
         for (String number : inputArray) {
             linkedList.insertNode(Integer.parseInt(number));
@@ -73,6 +79,7 @@ class InputFormatter {
 
     protected TreeNode formatBST(String input) {
         input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
         String[] inputArray = input.split(",");
 
         if (inputArray[0] == null) {
