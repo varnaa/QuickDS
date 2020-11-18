@@ -14,7 +14,7 @@ class List:
         :param length: length of the list
         :return: list of random numbers
         """
-        return [rd.randint(0, 10) for _ in range(length)]
+        return [rd.randint(0, length) for _ in range(length)]
 
     # Create random 2d list
     @staticmethod

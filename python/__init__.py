@@ -21,7 +21,7 @@ def create_linked_list(array):
     return LinkedList().create_linked_list(array)
 
 
-# Create random linked list
+# Create random linked list of given size or of size 10
 def create_random_linked_list(length=10):
     """
     :param length: length of the linked list and range of the items in linked list
@@ -31,7 +31,7 @@ def create_random_linked_list(length=10):
 
 
 # Print linked list
-def pretty_print(head):
+def pretty_print_llist(head):
     """
     :param head: head node of the linked list to be printed
     """
@@ -50,12 +50,13 @@ def create_random_list(length=10):
 
 
 # Creates 2d random list
-def create_random_2d_list(length=10):
+def create_random_2d_list(row_length=4, col_length=4):
     """
-    :param length: length of the list and range of the items in list
+    :param row_length: length of the rows and range of the items in row of list
+    :param col_length: length of the rows and range of the items in row of list
     :return: random 2d list
     """
-    return List().create_random_2d_list(length)
+    return List().create_random_2d_list(row_length, col_length)
 
 
 # Main functions for Input Formatter class
@@ -138,15 +139,6 @@ def convert_sorted_list_to_bst(array):
     :return: root node of the bst created
     """
     return bst().convert_sorted_list_to_bst(array, 0, len(array) - 1)
-
-
-# Creates BST from level order traversal
-def convert_level_order_traversal_to_bst(array):
-    """
-    :param array: level order traversal of array
-    :return: root node of the tree
-    """
-    return convert_sorted_list_to_bst(sorted(array))
 
 
 # Converts bst to encoded string

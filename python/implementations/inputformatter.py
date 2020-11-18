@@ -40,6 +40,7 @@ class InputFormatter:
         :return: 1d list
         """
         inp = inp.replace("{", "").replace("}", "")
+        inp = inp.replace("[", "").replace("]", "")
         inp = inp.split(",")
         # convert char list to int list
         return list(map(lambda a: int(a), inp))
@@ -52,6 +53,7 @@ class InputFormatter:
         :return: 1d list
         """
         inp = inp.replace("{", "").replace("}", "").replace("'", "")
+        inp = inp.replace("[", "").replace("]", "")
         inp = inp.split(",")
         # convert char list to int list
         return list(map(lambda a: int(a), inp))
@@ -66,6 +68,7 @@ class InputFormatter:
         :return: 2d list
         """
         inp = inp.replace("{", "").replace("}", "")
+        inp = inp.replace("[", "").replace("]", "")
         return InputFormatter.__matrix_from_string(inp, row_length, col_length)
 
     # Formats 2d char array
@@ -78,6 +81,7 @@ class InputFormatter:
         :return: 2d list
         """
         inp = inp.replace("{", "").replace("}", "").replace("'", "")
+        inp = inp.replace("[", "").replace("]", "")
         return InputFormatter.__matrix_from_string(inp, row_length, col_length)
 
     # Formats linked list
@@ -98,6 +102,7 @@ class InputFormatter:
         :return: root node of the tree
         """
         inp = inp.replace("[", "").replace("]", "")
+        inp = inp.replace("{", "").replace("}", "")
         if len(inp) == 0:
             return None
         return py.deserialize(inp)

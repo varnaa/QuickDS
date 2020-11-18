@@ -104,7 +104,7 @@ class BinarySearchTree:
     @staticmethod
     def deserialize(data):
         """
-        :param data: encoded string
+        :param data: serialized string
         :return: root node to bst
         """
 
