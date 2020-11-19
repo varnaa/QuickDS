@@ -3,6 +3,7 @@ package com.varnaa;
 /**
  * @Author: swethavarnaa
  */
+
 public class Quickds {
     private final Array array;
     private final LinkedList linkedList;
@@ -87,7 +88,7 @@ public class Quickds {
         if (array == null || array.length == 0) {
             throw new IllegalArgumentException("sorted Array can not be empty or null");
         }
-        return this.binarySearchTree.convertSortedArrayToBST(array, 0, array.length);
+        return this.binarySearchTree.convertSortedArrayToBST(array, 0, array.length - 1);
     }
 
     public TreeNode formatStringToBST(String input) {
