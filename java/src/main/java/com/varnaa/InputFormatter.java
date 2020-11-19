@@ -7,6 +7,8 @@ import java.util.Arrays;
  */
 class InputFormatter {
     private LinkedList linkedList;
+    private BinarySearchTree binarySearchTree;
+
 
     protected int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
@@ -78,15 +80,10 @@ class InputFormatter {
     }
 
     protected TreeNode formatBST(String input) {
+        binarySearchTree = new BinarySearchTree();
         input = input.replace("[", "").replace("]", "");
         input = input.replaceAll(" ", "");
-        String[] inputArray = input.split(",");
-
-        if (inputArray[0] == null) {
-            return null;
-        }
-        BinarySearchTree binarySearchTree = new BinarySearchTree();
-        return binarySearchTree.deserialize(inputArray, binarySearchTree);
+        return binarySearchTree.deserialize(input);
     }
 
 
