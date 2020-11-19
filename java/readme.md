@@ -40,7 +40,7 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ### I. [Input Generating Functions](#1arrays)
 
-### II. [Input Formatting Functions]()
+### II. [Input Formatting Functions](#input)
 
 ### III. [Pretty Print Functions]()
 
@@ -79,7 +79,7 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ### 3.Binary Search Tree
 
-- Default height: ?.
+- Default No:of nodes: 23.
 - Note: **Import TreeNode** class from the JAR file.
   - **Generates Random BST inputs**
 
@@ -91,11 +91,32 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ---
     
+## Input Formatting Functions:
+
+#### 1. Arrays: 
+1d Array: 
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/array1d.png)
+
+---
+2d Int Array
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dInt.png)
+
+---
+
+2d Char Array
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dCharArray.png)
+
+---
+
+#### 2. LinkedList:
+Array -> LL
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
 
 
+String -> LL
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
 
-
-
+---
 
 
 
