@@ -42,8 +42,6 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ### II. [Input Formatting Functions](#2input-formatting-functions)
 
-### III. [Pretty Print Functions]()
-
 ----------------------------------------------------
 
 ### 1.Arrays:
@@ -120,9 +118,26 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ---
 
+#### 3.Binary Search Tree
 
+1. **Level order traversal to BST** </br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstformatString.png)
 
+---
+2. **Create random BST** </br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createRandomBST.png)
 
+---
+
+3. **Create custom BST with no:of nodes specified**</br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createCustomBST.png)
+
+---
+
+4. **Create BST from sorted array**</br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstToSortedArray.png)
+
+---
 
 
 
