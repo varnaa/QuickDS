@@ -94,28 +94,28 @@ formats into actual datastructures** to quickly test their code in local IDE
 ## 2.Input Formatting Functions:
 
 #### 1. Arrays: 
-1. String to Array </br>
+1. **String to Array** </br>
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/array1d.png)
 
 ---
 
-2. String to 2d int Array
+2. **String to 2d int Array**
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dInt.png)
 
 ---
 
-3. String to 2d char Array
+3. **String to 2d char Array**
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dCharArray.png)
 
 ---
 
 #### 2. LinkedList:
-1. Array to Linked List </br> 
+1. **Array to Linked List** </br> 
 ![Array to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
 
 ---
 
-2. String to Linked List
+2. **String to Linked List** </br>
 ![String to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
 
 ---
