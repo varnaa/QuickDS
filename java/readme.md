@@ -1,22 +1,10 @@
 # Quick DS
 
-QuickDS is a library that contains a curated list of **Input Formatting** and **Input Generating Functions** that can be
-used to **generate some commonly used Abstract data types** without having to write any code from scratch. This library
-for was designed for the purposes of making competitive programming easy. Users can quickly convert **Serialized Input
-formats into actual datastructures** to quickly test their code in local IDE
 
----
+## Java Version
 
-#### Available Languages:
 
-* [Java](#Java-Version)
-* [Python](#PYTHON)
-
-# Java Version
-
----
-
-### SETUP: Include the library in your project dependency
+### Installation: Include the library in your project dependency
 
 - [Link to library JAR File]()
 - After Downloading the JAR File,
