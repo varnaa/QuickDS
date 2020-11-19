@@ -28,9 +28,7 @@
 
 ### I. [Input Generating Functions](#1arrays)
 
-### II. [Input Formatting Functions]()
-
-### III. [Pretty Print Functions]()
+### II. [Input Formatting Functions](#2input-formatting-functions)
 
 ----------------------------------------------------
 
@@ -67,7 +65,7 @@
 
 ### 3.Binary Search Tree
 
-- Default height: ?.
+- Default No:of nodes: 23.
 - Note: **Import TreeNode** class from the JAR file.
   - **Generates Random BST inputs**
 
@@ -79,15 +77,55 @@
 
 ---
     
+## 2.Input Formatting Functions:
 
+#### 1. Arrays: 
+1. **String to Array** </br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/array1d.png)
 
+---
 
+2. **String to 2d int Array**
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dInt.png)
 
+---
 
+3. **String to 2d char Array**
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dCharArray.png)
 
+---
 
+#### 2. LinkedList:
+1. **Array to Linked List** </br> 
+![Array to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
 
+---
 
+2. **String to Linked List** </br>
+![String to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
+
+---
+
+#### 3.Binary Search Tree
+
+1. **Level order traversal to BST** </br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstformatString.png)
+
+---
+2. **Create random BST** </br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createRandomBST.png)
+
+---
+
+3. **Create custom BST with no:of nodes specified**</br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createCustomBST.png)
+
+---
+
+4. **Create BST from sorted array**</br>
+![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstToSortedArray.png)
+
+---
 
 
 

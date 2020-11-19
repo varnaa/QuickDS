@@ -1,6 +1,5 @@
 package com.varnaa;
 
-import java.util.LinkedList;
 import java.util.*;
 
 /**
@@ -20,25 +19,6 @@ class BinarySearchTree {
         this.root = root;
     }
 
-    private TreeNode insertNode(TreeNode root, String value) {
-        if (!value.contentEquals("null")) {
-            if (root == null) {
-                root = new TreeNode(Integer.parseInt(value));
-                return root;
-
-            }
-            if (Integer.parseInt(value) < root.value) {
-                root.left = insertNode(root.left, value);
-                return root.left;
-            } else if (Integer.parseInt(value) > root.value) {
-                root.right = insertNode(root.right, value);
-                return root.right;
-            }
-        }
-
-        return null;
-    }
-
     protected TreeNode createRandomBinarySearchTree() {
         BinarySearchTree binarySearchTree = new BinarySearchTree();
         int[] randomNumbers = random.ints(1, 100).distinct().limit(height).toArray();
@@ -47,6 +27,54 @@ class BinarySearchTree {
         return binarySearchTree.getRoot();
 
     }
+
+    protected TreeNode deserialize(String data) {
+        if (data.isEmpty())
+            return null;
+
+        List<Integer> nodes = new ArrayList<>();
+        for (String node : data.split(",")) {
+            if (node.contentEquals("null")) {
+                nodes.add(null);
+            } else {
+                nodes.add(Integer.valueOf(node));
+            }
+        }
+
+        return buildTree(nodes);
+    }
+
+    private TreeNode buildTree(List<Integer> nodes) {
+        if (nodes.isEmpty()) {
+            return null;
+        }
+
+        int index = 0, length = nodes.size();
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        TreeNode root = new TreeNode(nodes.get(index++));
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode current = queue.poll();
+
+                if (index < length && nodes.get(index) != null) {
+                    current.left = new TreeNode(nodes.get(index));
+                    queue.offer(current.left);
+                }
+                index++;
+                if (index < length && nodes.get(index) != null) {
+                    current.right = new TreeNode(nodes.get(index));
+                    queue.offer(current.right);
+                }
+                index++;
+            }
+        }
+
+        return root;
+    }
+
 
     protected TreeNode convertSortedArrayToBST(int[] randomNumbers, int lowerBound, int upperBound) {
         if (lowerBound > upperBound) return null;
@@ -58,58 +86,6 @@ class BinarySearchTree {
         return root;
     }
 
-    private String[] serialize(TreeNode root) {
-        if (root == null)
-            System.out.println("[]");
-        List<String> bstList = new LinkedList<>();
-        Deque<TreeNode> queue = new LinkedList<>();
-        queue.offer(root);
-
-        while (!queue.isEmpty()) {
-            int currentSize = queue.size();
-            List<String> level = new LinkedList<>();
-            for (int i = 0; i < currentSize; i++) {
-                TreeNode current = queue.poll();
-                if (current != null) {
-                    level.add(String.valueOf(current.value));
-                } else {
-                    level.add(null);
-                }
-                if (current != null) {
-                    queue.offer(current.left);
-                    queue.offer(current.right);
-                }
-            }
-            bstList.addAll(level);
-        }
-
-        String[] bstArray = new String[bstList.size()];
-        for (int i = 0; i < bstArray.length; i++) {
-            bstArray[i] = bstList.get(i);
-        }
-        return bstArray;
-    }
-
-    protected TreeNode deserialize(String[] input, BinarySearchTree binarySearchTree) {
-        Deque<TreeNode> queue = new LinkedList<>();
-        TreeNode root = binarySearchTree.getRoot();
-        root = binarySearchTree.insertNode(root, input[0]);
-        queue.offer(root);
-
-        for (int i = 1; i < input.length; i++) {
-            TreeNode parent = queue.poll();
-            if (parent != null) {
-                parent.left = binarySearchTree.insertNode(parent, input[i]);
-                queue.offer(parent.left);
-                ++i;
-                if (i < input.length) {
-                    parent.right = binarySearchTree.insertNode(parent, input[i]);
-                    queue.offer(parent.right);
-                }
-            }
-        }
-        return root;
-    }
 
     protected void prettyPrint(String prefix, TreeNode root, boolean isLeft) {
         if (root != null) {
@@ -120,21 +96,36 @@ class BinarySearchTree {
     }
 
     protected void printBSt(TreeNode root) {
-        String[] array = serialize(root);
-        int index = array.length - 1;
-        while (array[index] == null) {
-            index--;
-        }
-        StringBuilder output = new StringBuilder("[");
-        for (int i = 0; i < index; i++) {
-            output.append(array[i]).append(",");
-        }
-        output.append(array[index]).append("]");
-
-        System.out.println(output.toString());
+        System.out.println(levelOrder(root));
     }
 
     protected void setHeight(int height) {
         this.height = height;
     }
+
+    protected String levelOrder(TreeNode root) {
+        Deque<TreeNode> queue = new ArrayDeque<>();
+        StringBuilder result = new StringBuilder();
+        result.append("[");
+        queue.offer(root);
+
+        while (!queue.isEmpty()) {
+            int size = queue.size();
+            for (int i = 0; i < size; i++) {
+                TreeNode current = queue.poll();
+                result.append(current.value).append(" ");
+
+                if (current.left != null) {
+                    queue.offer(current.left);
+                }
+
+                if (current.right != null) {
+                    queue.offer(current.right);
+                }
+            }
+        }
+        result.append("]");
+        return result.toString();
+    }
+
 }
