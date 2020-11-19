@@ -40,7 +40,7 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ### I. [Input Generating Functions](#1arrays)
 
-### II. [Input Formatting Functions](#input)
+### II. [Input Formatting Functions](#2input-formatting-functions)
 
 ### III. [Pretty Print Functions]()
 
@@ -91,26 +91,32 @@ formats into actual datastructures** to quickly test their code in local IDE
 
 ---
     
-### Input Formatting Functions:
+## 2.Input Formatting Functions:
 
 #### 1. Arrays: 
-
+1. **String to Array** </br>
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/array1d.png)
 
 ---
+
+2. **String to 2d int Array**
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dInt.png)
 
 ---
 
+3. **String to 2d char Array**
 ![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dCharArray.png)
 
 ---
 
 #### 2. LinkedList:
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
+1. **Array to Linked List** </br> 
+![Array to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
 
+---
 
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
+2. **String to Linked List** </br>
+![String to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
 
 ---
 
