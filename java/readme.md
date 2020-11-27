@@ -11,7 +11,7 @@
   - Open your Project Module Settings.
   - Go to Dependencies and include the JAR
 
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/ss1.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/ss1.png)
 
 ---
 
@@ -20,7 +20,7 @@
 * Import the class ***Quickds*** from the added jar file. From this class users can access all the functions this
   library has to offer. See [Examples](###Examples:)
 
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/ss2.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/ss2.png)
 
 ## Examples:
 
@@ -81,49 +81,49 @@
 
 #### 1. Arrays: 
 1. **String to Array** </br>
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/array1d.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/array1d.png)
 
 ---
 
 2. **String to 2d int Array**
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dInt.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/2dInt.png)
 
 ---
 
 3. **String to 2d char Array**
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/2dCharArray.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/2dCharArray.png)
 
 ---
 
 #### 2. LinkedList:
 1. **Array to Linked List** </br> 
-![Array to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/arrayLL.png)
+![Array to LL](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/arrayLL.png)
 
 ---
 
 2. **String to Linked List** </br>
-![String to LL](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/StringLL.png)
+![String to LL](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/StringLL.png)
 
 ---
 
 #### 3.Binary Search Tree
 
 1. **Level order traversal to BST** </br>
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstformatString.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/bstformatString.png)
 
 ---
 2. **Create random BST** </br>
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createRandomBST.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/createRandomBST.png)
 
 ---
 
 3. **Create custom BST with no:of nodes specified**</br>
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/createCustomBST.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/createCustomBST.png)
 
 ---
 
 4. **Create BST from sorted array**</br>
-![image](https://github.com/varnaa/QuickDS/blob/varnaa/java/screenshots/bstToSortedArray.png)
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/bstToSortedArray.png)
 
 ---
 
