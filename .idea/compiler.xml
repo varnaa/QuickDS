@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+<<<<<<< HEAD
     <bytecodeTargetLevel target="11">
       <module name="java" target="1.8" />
+=======
+    <bytecodeTargetLevel>
+      <module name="quickds" target="1.8" />
+>>>>>>> Switched to varnaa branch for java.
     </bytecodeTargetLevel>
   </component>
 </project>
