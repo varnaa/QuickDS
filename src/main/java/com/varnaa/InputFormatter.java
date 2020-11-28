@@ -12,11 +12,9 @@ class InputFormatter {
 
     protected int[] format1dArray(String input) {
         assert input != null : "input to format can not be null";
-        input = input.replace("[", "").replace("]", "");
-        input = input.replaceAll(" ", "");
+        input = formatInput(input);
         String[] inputArray = input.split(",");
         int[] array = new int[inputArray.length];
-
         for (int i = 0; i < array.length; i++) {
             array[i] = Integer.parseInt(inputArray[i]);
         }
@@ -25,10 +23,9 @@ class InputFormatter {
 
     protected char[][] format2dCharArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
-        input = input.replace("[", "").replace("]", "");
         input = input.replaceAll("'", "");
-        input = input.replaceAll(" ", "");
         input = input.replaceAll(",", "");
+        input = formatInput(input);
         int index = 0;
         char[][] grid = new char[rowLength][colLength];
         for (int i = 0; i < rowLength; i++) {
@@ -41,8 +38,7 @@ class InputFormatter {
 
     protected int[][] format2dIntArray(String input, int rowLength, int colLength) {
         assert input != null : "input to format can not be null";
-        input = input.replace("[", "").replace("]", "");
-        input = input.replaceAll(" ", "");
+        input = formatInput(input);
         String[] inputArray = input.split(",");
         int index = 0;
         int[][] matrix = new int[rowLength][colLength];
@@ -58,8 +54,7 @@ class InputFormatter {
     protected Node formatToLinkedList(String input) {
 
         assert input != null : "input to format can not be null";
-        input = input.replace("[", "").replace("]", "");
-        input = input.replaceAll(" ", "");
+        input = formatInput(input);
         String[] inputArray = input.split(",");
         System.out.println(Arrays.toString(inputArray));
         linkedList = new LinkedList();
@@ -81,10 +76,15 @@ class InputFormatter {
 
     protected TreeNode formatBST(String input) {
         binarySearchTree = new BinarySearchTree();
-        input = input.replace("[", "").replace("]", "");
-        input = input.replaceAll(" ", "");
+        input = formatInput(input);
         return binarySearchTree.deserialize(input);
     }
 
+    // Todo: Optimization
+    private String formatInput(String input) {
+        input = input.replace("[", "").replace("]", "");
+        input = input.replaceAll(" ", "");
+        return input;
+    }
 
 }
