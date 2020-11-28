@@ -3,13 +3,9 @@
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/" />
     </CLASSES>
-<<<<<<< HEAD
-    <JAVADOC />
-=======
     <JAVADOC>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-javadoc.jar!/" />
     </JAVADOC>
->>>>>>> Switched to varnaa branch for java.
     <SOURCES>
       <root url="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/" />
     </SOURCES>

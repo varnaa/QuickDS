@@ -30,7 +30,7 @@ public class Quickds {
         return this.array.createRandomArray();
     }
 
-    public int[] createCustom1dArray(int size) {
+    public int[] createRandom1dArray(int size) {
         return this.array.createRandomArray(size);
     }
 
@@ -42,7 +42,7 @@ public class Quickds {
         return this.array.createRandom2DArray();
     }
 
-    public int[][] createCustom2dArray(int rowLength, int colLength) {
+    public int[][] createRandom2dArray(int rowLength, int colLength) {
         return this.array.createRandom2DArray(rowLength, colLength);
     }
 
@@ -62,7 +62,7 @@ public class Quickds {
         return this.linkedList.createRandomLinkedList();
     }
 
-    public Node createCustomLinkedList(int length) {
+    public Node createRandomLinkedList(int length) {
         this.linkedList.setLENGTH(length);
         return this.linkedList.createRandomLinkedList();
     }
@@ -79,7 +79,7 @@ public class Quickds {
         return this.binarySearchTree.createRandomBinarySearchTree();
     }
 
-    public TreeNode createCustomBST(int numberOfNodes) {
+    public TreeNode createRandomBST(int numberOfNodes) {
         this.binarySearchTree.setHeight(numberOfNodes);
         return binarySearchTree.createRandomBinarySearchTree();
     }

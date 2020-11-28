@@ -27,8 +27,8 @@ public class QuickDSTest {
 
     @Test
     public void createCustomArrayTest() {
-        int[] generatedArray = quickds.createCustom1dArray(20);
-        int[][] generated2dArray = quickds.createCustom2dArray(5, 5);
+        int[] generatedArray = quickds.createRandom1dArray(20);
+        int[][] generated2dArray = quickds.createRandom2dArray(5, 5);
         Assertions.assertEquals(generatedArray.length, 20);
         Assertions.assertEquals(generated2dArray.length, 5);
         Assertions.assertEquals(generated2dArray[0].length, 5);
@@ -91,7 +91,7 @@ public class QuickDSTest {
 
 
         // Custom
-        TreeNode customRoot = quickds.createCustomBST(45);
+        TreeNode customRoot = quickds.createRandomBST(45);
 
 
         quickds.prettyPrintBST(root);
