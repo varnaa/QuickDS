@@ -24,8 +24,6 @@
 
 ## Examples:
 
----
-
 ### I. [Input Generating Functions](#1arrays)
 
 ### II. [Input Formatting Functions](#2input-formatting-functions)
