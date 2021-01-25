@@ -8,3 +8,8 @@ formats into actual datastructures** to quickly test their code in local IDE
 #### Available Languages:
 * [Java](https://github.com/varnaa/QuickDS/tree/master/java)
 * [Python](https://github.com/varnaa/QuickDS/tree/master/python)
+
+
+Example:
+
+![image](https://github.com/varnaa/QuickDS/blob/master/java/screenshots/createRandomBST.png)
